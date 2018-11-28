@@ -14,8 +14,7 @@ archive.close()
 
 
 host = "95.31.3.231"
-print("Enter username: ")
-user = input()
-print("Enter path(where to save):")
-savepath = input()
-os.system("scp " + user + "@" + host + ":archive.rar " + savepath)
+user = input("Enter username: ")
+savepath = input("Enter path(where to save):")
+fetchfile = input("Enter file to fetch: ")
+os.system("scp " + user + "@" + host + ":" + fetchfile + " " + savepath)
